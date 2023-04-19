@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+<div>
+  <p><%= @pdr.my_zone %></p>
+  <%= "Відповіді:" %>
+ <p> <%= @pdr.answer %></p>
+  <%= "Оцінка:" %>
+  <p><%= @pdr.mark %></p>
+</div>
+<% unless current_user.adminn?%>
+<div>
+  <%= button_to "Видалити мою відповідь", @pdr, method: :delete %>
+</div>
+<% end %>
+<% if current_user.adminn?%>
+<div>
+  <%= link_to "Оцінити", edit_pdr_path(@pdr), class:"btn btn-outline-primary"%>
+</div>
+<% end %>
