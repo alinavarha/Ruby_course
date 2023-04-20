@@ -2,13 +2,14 @@
  <% if pdr.user_id == 1 %>
     <div class="card text-center mb-3" style="width: 18rem; text-align: center;">
       <div class="card-body">
-        <h5 class="card-title">Білет №<%= pdr.id %></h5>
+        <h5 class="card-title">Білет №<%= @count %></h5>
         <p class="card-text">Пройдіть тестування та отримайте оцінку та коментарі від наших інструкторів</p>
           <a href="#" class="card-link">
               <%= link_to "Почати", edit_pdr_path(pdr.id)%>
           </a>
       </div>
     </div>
+    <% @count += 1%>
   <% end %>
 <% end %>
 

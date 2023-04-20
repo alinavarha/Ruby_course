@@ -2,10 +2,11 @@
 <div>
   <% @pdrs.each do |pdr| %>
      <% if pdr.user == current_user ||current_user.adminn?%>
-    <%= pdr.id %><br>
+    <%= @count %><br>
     <%= "Оцінка:" %>
     <%= pdr.mark%>
      <p><%= link_to "Показати мою відповідь", pdr %></p>
+      <% @count += 1 %>
     <%end%>
   <% end %>
 </div>

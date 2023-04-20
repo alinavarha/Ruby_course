@@ -5,6 +5,7 @@ class PdrsController < ApplicationController
   # GET /pdrs or /pdrs.json
   def index
    @pdrs = Pdr.all
+   @count = 1
   end
 
   # GET /pdrs/1 or /pdrs/1.json

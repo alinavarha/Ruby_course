@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
   def tests
     @pdrs = Pdr.all
+    @count = 1
   end
   def rules
     @rules = Rule.all
