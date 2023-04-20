@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def index
   end
   def tests
+    @pdrs = Pdr.all
   end
   def rules
     @rules = Rule.all

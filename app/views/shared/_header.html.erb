@@ -13,6 +13,7 @@
       <%= link_to "Правила", home_rules_path, class: "nav-link active"%>
       <%= link_to "Тести", home_tests_path, class: "nav-link"%>
       <%= link_to "Мої тести", pdrs_path, class: "nav-link active"%>
+      <%= link_to "Наші інструктори", instuctors_path, class: "nav-link active"%>
       <%= button_to "Вийти", destroy_user_session_path, method: :delete, style: "background-color: #1E90FF; color: #F5F5F5; border: #1E90FF;  border-radius: 4px;padding: 10px 20px;"%>
       <% end %>
       </div>
@@ -22,7 +23,6 @@
 <% else %>
 <h1>Зареєструйтесь, будь ласка, щоб використовувати наш сайт</h1>
 <br>
-
         <%= button_to "Ввійти", new_user_session_path, method: :get, style: "background-color: #1E90FF; color: #F5F5F5; border:#1E90FF;  border-radius: 4px;padding: 10px 20px;" %>
         <br>
         <%= button_to "Зареєструватись", new_user_registration_path, method: :get, style: "background-color:#1E90FF; color:#F5F5F5; border: #1E90FF;  border-radius: 4px; padding: 10px 20px;" %>

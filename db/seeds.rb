@@ -165,3 +165,6 @@ Rule.create([{title:"Загальні положення", body:"1.1 Ці Пра
     шляхопровід — інженерна споруда мостового типу над іншою дорогою (залізницею) в місці їх перетину, що забезпечує рух по ній на різних рівнях та дає можливість з’їзду на іншу дорогу.
     
     "}])
+    Instuctor.create([{name:"Олександр Володимирович", car:"Scoda Octavia", w_experience: "10", regist_date:"15.05.2017", image: "instr1.jpg"}])
+    Instuctor.create([{name:"Станіслав Васильович", car:"Scoda Fabia", w_experience: "12", regist_date:"22.05.2022", image: "instr2.jpg"}])
+    Instuctor.create([{name:"Ігор Віталійович", car:"Hyundai Accent", w_experience: "5", regist_date:"10.04.2018", image: "instr3.jpg"}])

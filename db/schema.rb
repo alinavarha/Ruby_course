@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_18_185136) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_20_121645) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -37,6 +37,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_185136) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "instuctors", force: :cascade do |t|
+    t.string "name"
+    t.string "car"
+    t.integer "w_experience"
+    t.date "regist_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+  end
+
   create_table "pdrs", force: :cascade do |t|
     t.text "my_zone"
     t.text "answer"
@@ -58,6 +68,32 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_185136) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tasks", force: :cascade do |t|
+    t.string "f_t"
+    t.string "string"
+    t.string "s_t"
+    t.string "t_t"
+    t.string "four_t"
+    t.string "fiv_t"
+    t.string "six_t"
+    t.string "sev_t"
+    t.string "e_t"
+    t.string "nine_t"
+    t.string "ten_t"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.text "a"
+    t.text "b"
+    t.text "c"
+    t.text "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -67,6 +103,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_185136) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin"
     t.boolean "adminn"
     t.index ["admin"], name: "index_users_on_admin"
     t.index ["email"], name: "index_users_on_email", unique: true

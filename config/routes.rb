@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  resources :instuctors
   resources :pdrs
-
   devise_for :users
   get 'home/index'
   get 'home/tests'
